@@ -8,6 +8,10 @@ A virtual DOM is an "in memory" representation of a DOM. Since DOM operations ar
 
 A similar but different approach is used by Incremental DOM [3]. Incremental DOM keeps only one virtual DOM and calculates diffs between the actual DOM and the virtual one. In this way memory usage is lower and, as a side effect, rendering is sometimes faster.
 
+## Blaze
+
+Blaze [4] is the rendering engine developed by Meteor. It does have a in memory representation of the DOM, but it is not based on the diff approach typical of Virtual DOM rendering. Reactivity is based on [Tracker](https://github.com/meteor/meteor/tree/devel/packages/tracker).
+
 ## Differences with the Shadow DOM
 
 Shadow DOM [2] is a W3C spec that provides better encapsulation and compositionality for DOM. Hence, it is not related at all with Virtual DOM.
@@ -33,3 +37,5 @@ Shadow DOM [2] is a W3C spec that provides better encapsulation and compositiona
 [2] [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM)
 
 [3] [Incremental DOM](http://google.github.io/incremental-dom/#about)
+
+[4] [Blaze](https://github.com/meteor/meteor/tree/devel/packages/blaze)
